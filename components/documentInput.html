@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+        :root{
+            --lightGray: #F2F2F2;
+            --midGray: #BEBEBE;
+            --darkGray: #6B6B6B;
+            --ddbRed: #B92221;
+            --blue: #095DAB;
+        }
+        .documentInput{
+            appearance: none;
+            height: 5.8rem;
+            width: 100%;
+            max-width: 35rem;
+            border: 1px solid var(--darkGray);
+            border-radius: 5px;
+            outline: none;
+            text-align: center;
+            font-size: 3.2rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+        .documentInput::placeholder{
+            color: var(--midGray);
+        }
+    </style>
+</head>
+<body>
+    <input type="number" placeholder="123456" class="documentInput">
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+        :root{
+            --white: #FFFFFF;
+            --lightGray: #F2F2F2;
+            --midGray: #BEBEBE;
+            --darkGray: #6B6B6B;
+            --ddbRed: #B92221;
+            --ddbRed2: #DB2A29;
+            --blue: #095DAB;
+        }
+        input[type='radio']{
+            display: none;
+        }
+        .docTypeContainer label:has(input[type='radio']:checked){
+            background-color: var(--blue);
+            color: var(--white);
+        }
+        .docTypeContainer{
+            width: 100%;
+            max-width: 35rem;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid var(--midGray);
+            border-radius: 5px;
+        }
+        .docTypeContainer label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5.8rem;
+            width: 100%
+        }
+        .docTypeContainer label span{
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="docTypeContainer">
+        <label for="FE" class="test">
+            <input type="radio" name="docType" id="FE" value="FE">
+            <span>FE</span>
+        </label>
+        <label for="REM">
+            <input type="radio" name="docType" id="REM" value="REM">
+            <span>REM</span>
+        </label>
+        <label for="PED">
+            <input type="radio" name="docType" id="PED" value="PED">
+            <span>PED</span>
+        </label>
+    </div>
+</body>
+</html>

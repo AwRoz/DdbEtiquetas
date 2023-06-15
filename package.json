@@ -1,0 +1,18 @@
+{
+  "name": "etiquetas",
+  "version": "1.0.0",
+  "description": "Conexion de pruebas LIBRA JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "LIBRA"
+  ],
+  "author": "awroz",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.1.1",
+    "oracledb": "^6.0.0"
+  }
+}

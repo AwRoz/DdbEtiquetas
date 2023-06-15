@@ -20,13 +20,10 @@
             --ddbRed: #B92221;
             --ddbRed2: #DB2A29;
             --blue: #095DAB;
+            --darkBlue: #0958a25f;
         }
         input[type='radio']{
             display: none;
-        }
-        .docTypeContainer label:has(input[type='radio']:checked){
-            background-color: var(--blue);
-            color: var(--white);
         }
         .docTypeContainer{
             width: 100%;
@@ -36,30 +33,42 @@
             border: 1px solid var(--midGray);
             border-radius: 5px;
         }
-        .docTypeContainer label{
+        .docTypeOption{
             display: flex;
             justify-content: center;
             align-items: center;
             height: 5.8rem;
             width: 100%
         }
-        .docTypeContainer label span{
+        .docTypeOption span{
             font-family: 'Roboto Mono', monospace;
             font-size: 2.2rem;
         }
-    </style>
+        .docTypeOption:has(input[type='radio']:checked){
+            background-color: var(--blue);
+            color: var(--white);
+            box-shadow: inset 0px 0px 8px 9px rgba(0, 0, 0, 0.1);
+        }
+        .docTypeOption:nth-child(2){
+            border-left: 1px solid var(--midGray);
+            border-right: 1px solid var(--midGray);
+        }
+        .docTypeOption:hover{
+            background-color: var(--darkBlue);
+        }
+        </style>
 </head>
 <body>
     <div class="docTypeContainer">
-        <label for="FE" class="test">
+        <label for="FE" class='docTypeOption'>
             <input type="radio" name="docType" id="FE" value="FE">
             <span>FE</span>
         </label>
-        <label for="REM">
+        <label for="REM" class='docTypeOption'>
             <input type="radio" name="docType" id="REM" value="REM">
             <span>REM</span>
         </label>
-        <label for="PED">
+        <label for="PED" class='docTypeOption'>
             <input type="radio" name="docType" id="PED" value="PED">
             <span>PED</span>
         </label>

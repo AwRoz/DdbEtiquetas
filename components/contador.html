@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-size: 62.5%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            max-width: 37.5rem;
+            margin: 10px;
+        }
+        :root{
+            --white: #FFFFFF;
+            --lightGray: #F2F2F2;
+            --midGray: #BEBEBE;
+            --darkGray: #6B6B6B;
+            --ddbRed: #B92221;
+            --ddbRed2: #DB2A29;
+            --blue: #095DAB;
+        }
+        .contadorContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+        .contadorContainer p{
+            font-family: 'Open Sans',sans-serif;
+            font-size:1.6rem;
+            color: var(--darkGray);
+        }
+        .contador{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border: 1px solid var(--darkGray);
+            border-radius: 5px;
+        }
+        .contador > *{
+            width: 100%;
+            height: 5.8rem;
+            font-family: 'Roboto Mono',monospace;
+            font-size: 4rem;
+            appearance: none;
+            outline: none;
+            border:none;
+            background-color:transparent;
+        }
+        .contador input{
+            text-align: center;
+            border-left:1px solid var(--darkGray);
+            border-right: 1px solid var(--darkGray);
+        }
+        .contador button:hover{
+            background-color: var(--lightGray);
+        }
+        .contador input::placeholder{
+            color: var(--darkGray);
+        }
+    </style>
+</head>
+<body>
+    <div class="contadorContainer">
+        <p>🧊 Cantidad Neveras</p>
+        <div class="contador">
+            <button onclick="decreaseValue('cantNeveras')">-</button>
+            <input type="number" id="cantNeveras" placeholder="0" min="0">
+            <button onclick="increaseValue('cantNeveras')">+</button>
+        </div>
+    </div>
+
+    <script>
+        function decreaseValue(inputId){
+            const input = document.getElementById(inputId)
+            if(input.value){
+                if(input.value > 0){
+                    input.value = parseInt(input.value) - 1
+                }
+            }
+        }
+
+        function increaseValue(inputId){
+            const input = document.getElementById(inputId)
+            if(!input.value){input.value = 0}
+            if(input.value >= 0){
+                input.value = parseInt(input.value) + 1
+            }
+        }
+    </script>
+
+</body>
+</html>

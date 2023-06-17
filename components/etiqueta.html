@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-size: 62.5%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            max-width: 37.7rem;
+            margin: 10px;
+        }
+        :root{
+            --white: #FFFFFF;
+            --lightGray: #F2F2F2;
+            --midGray: #BEBEBE;
+            --darkGray: #6B6B6B;
+            --ddbRed: #B92221;
+            --ddbRed2: #DB2A29;
+            --blue: #095DAB;
+        }
+        .etiqueta{
+            max-width: 37.7rem;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .etiqueta__header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .etiqueta__info{
+            width: 247px;
+        }
+        .nombreCliente{
+            font-family: 'Open Sans',sans-serif;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        .metaData{
+            font-family: 'Roboto Condensed',sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
+        .etiqueta__logoDdb{
+            display: block;
+            width: 130px;
+            height: 67px;
+            background-image: url(../src/assets/deposito-de-drogas-boyaca-logo.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:contain;
+        }
+        .etiqueta__data h3{
+            font-family: 'Open Sans',sans-serif;
+            font-size: 1.4rem;
+            font-weight: lighter;
+        }
+        .etiqueta__data p{
+            font-family: 'Roboto Mono',monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .nevera_check{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .nevera_check h2{
+            font-family: 'Open Sans',sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .nevera_check span{
+            display: block;
+            width: 84px;
+            height:84px;
+            border: 3px solid #000;
+            font-size: 70px;
+            font-family: 'Open Sans',sans-serif;
+            text-align: center;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .etiqueta__cajas{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .etiqueta__cajas h1{
+            font-family: 'Open Sans',sans-serif;
+            font-size: 3.6rem;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div class="etiqueta">
+        <section class="etiqueta__header">
+            <div class="etiqueta__info">
+                <h2 class="etiqueta__info__cliente nombreCliente">ESE HOSPITAL UNIVER. SAN 
+                    RAFAEL DE TUNJA</h2>
+                <p class="etiqueta__info__direccion metaData">Transversal 93  # 51 - 98</p>
+                <p class="etiqueta__info__ciudad metaData">Tunja, Cundunamarca</p>
+            </div>
+            <span class="etiqueta__logoDdb"></span>
+        </section>
+        <section class="etiqueta__data">
+            <h3>DOCUMENTOS:</h3>
+            <p>FE/123456, FE/44346, FE/55632, REM/123355, PED/123456, PED/44346, PED/55632</p>
+        </section>
+        <section class="etiqueta__cajas">
+            <div class="nevera_check">
+                <h2>NEVERA ?</h2>
+                <span>X</span>
+            </div>
+            <h1>Caja 1 de 5</h1>
+        </section>
+    </div>
+
+
+    <script>
+
+    </script>
+
+</body>
+</html>

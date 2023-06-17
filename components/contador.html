@@ -72,7 +72,7 @@
         <p>🧊 Cantidad Neveras</p>
         <div class="contador">
             <button onclick="decreaseValue('cantNeveras')">-</button>
-            <input type="number" id="cantNeveras" placeholder="0" min="0">
+            <input type="text" id="cantNeveras" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
             <button onclick="increaseValue('cantNeveras')">+</button>
         </div>
     </div>
@@ -86,7 +86,6 @@
                 }
             }
         }
-
         function increaseValue(inputId){
             const input = document.getElementById(inputId)
             if(!input.value){input.value = 0}

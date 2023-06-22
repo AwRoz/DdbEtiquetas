@@ -12,6 +12,7 @@
 <body>
     <div class="mainContainer">
         <h3 class="componentTitle">Ingresar documentos a la cola</h3>
+
         <div class="docTypeContainer">
             <label for="FE" class='docTypeOption'>
                 <input type="radio" name="docType" id="FE" value="FE">
@@ -26,9 +27,68 @@
                 <span>PED</span>
             </label>
         </div>
-        <input type="text" placeholder="123456" class="documentInput" min="0" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-        <button class="primaryBtn">Agregar a la cola</button>
-    </div>
 
+        <input type="text" placeholder="123456" class="documentInput" min="0" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+        <button class="primaryBtn">Agregar a la cola</button>
+
+        <section class="colaContainer">
+            <div class="colaHeader">
+                <h2 class="nombreCliente">CLINICA UNIVERSIDAD DE LA SABANA</h2>
+                <h3 class="domicilioEnvio metaData">Cr 123 # 45 - 78 Sur - Bodega piso 1</h3>
+                <h3 class="ciudadMunicipio metaData">Bogota, Cundinamarca</h3>
+            </div>
+            <ul class="colaDocumentos">
+                <li class="documentoEnCola">
+                    <p>PED/123456</p>
+                    <span class="deleteItemBtn">Eliminar</span>
+                </li>
+                <li class="documentoEnCola">
+                    <p>FE/99540</p>
+                    <span class="deleteItemBtn">Eliminar</span>
+                </li>
+            </ul>
+        </section>
+
+        <div class="contadorContainer">
+            <p><span>🧊 </span>Cantidad Neveras</p>
+            <div class="contador">
+                <button onclick="decreaseValue('cantNeveras')">-</button>
+                <input type="text" id="cantNeveras" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <button onclick="increaseValue('cantNeveras')">+</button>
+            </div>
+        </div>
+        <div class="contadorContainer">
+            <p><span>📦 </span>Cantidad Cajas</p>
+            <div class="contador">
+                <button onclick="decreaseValue('cantCajas')">-</button>
+                <input type="text" id="cantCajas" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <button onclick="increaseValue('cantCajas')">+</button>
+            </div>
+        </div>
+
+        <section class="rangos">
+            <h3 class="componentTitle">Personalizar Rangos <span>▼</span></h3>
+            <div class="contadorContainer">
+                <p><span>🏳️ </span>Desde</p>
+                <div class="contador">
+                    <button onclick="decreaseValue('desde')">-</button>
+                    <input type="text" id="desde" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <button onclick="increaseValue('desde')">+</button>
+                </div>
+            </div>
+            <div class="contadorContainer">
+                <p><span>🏁 </span>Hasta</p>
+                <div class="contador">
+                    <button onclick="decreaseValue('hasta')">-</button>
+                    <input type="text" id="hasta" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <button onclick="increaseValue('hasta')">+</button>
+                </div>
+            </div>
+        </section>
+
+        <button class="primaryBtn">Generar etiquetas</button>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>

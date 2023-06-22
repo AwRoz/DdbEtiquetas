@@ -15,6 +15,13 @@
     --darkBlue: #0958a25f;
 }
 
+.mainContainer{
+    min-width: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 /* ----- Component titles ------ */
 .componentTitle{
@@ -22,10 +29,15 @@
     font-size: 1.6rem;
     font-weight: 300;
     color: var(--darkGray);
+    display: flex;
+    justify-content: space-between;
+}
+.componentTitle span{
+    font-size: 1.7rem;
+    padding-right: 1rem;
 }
 
 /* ----- Document Type component ------ */
-
 input[type='radio']{
     display: none;
 }
@@ -98,5 +110,103 @@ input[type='radio']{
 }
 .primaryBtn:hover{
     background-color: var(--ddbRed2);
+}
+
+/* ----- Cola de Documentos component ------ */
+.colaContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+.colaDocumentos{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-color: var(--lightGray);
+    padding:1rem;
+}
+.nombreCliente{
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.metaData{
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+.documentoEnCola{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.documentoEnCola p{
+    font-family: 'Roboto Mono',monospace;
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+.deleteItemBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.8rem;
+    height: 3rem;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1.2rem;
+    background-color: var(--ddbRed);
+    color: var(--white);
+    border-radius: 5px;
+    opacity: 80%;
+}
+.deleteItemBtn:hover{
+    cursor:default;
+    opacity: 100%;
+}
+
+
+/* ----- Contador component ------ */
+.contadorContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.contadorContainer p{
+    font-family: 'Open Sans',sans-serif;
+    font-size:1.6rem;
+    color: var(--darkGray);
+}
+.contadorContainer p span{
+    font-size: 2.2rem;
+}
+.contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid var(--darkGray);
+    border-radius: 5px;
+}
+.contador > *{
+    width: 100%;
+    height: 5.8rem;
+    font-family: 'Roboto Mono',monospace;
+    font-size: 3.2rem;
+    appearance: none;
+    outline: none;
+    border:none;
+    background-color:transparent;
+}
+.contador input{
+    text-align: center;
+    border-left:1px solid var(--darkGray);
+    border-right: 1px solid var(--darkGray);
+}
+.contador button:hover{
+    background-color: var(--lightGray);
+}
+.contador input::placeholder{
+    color: var(--darkGray);
+}
+.contador input:focus::placeholder{
+    color: transparent;
 }
 

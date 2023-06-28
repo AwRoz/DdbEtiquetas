@@ -17,10 +17,20 @@
 
 .mainContainer{
     min-width: 250px;
-    padding: 10px;
+    max-width: 425px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+}
+.mainContainer section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.disabled{
+    display: none;
 }
 
 /* ----- Component titles ------ */
@@ -31,6 +41,7 @@
     color: var(--darkGray);
     display: flex;
     justify-content: space-between;
+    margin: 10px;
 }
 .componentTitle span{
     font-size: 1.7rem;
@@ -43,7 +54,6 @@ input[type='radio']{
 }
 .docTypeContainer{
     width: 100%;
-    max-width: 35rem;
     display: flex;
     justify-content: space-around;
     border: 1px solid var(--midGray);
@@ -78,7 +88,6 @@ input[type='radio']{
     appearance: none;
     height: 5.8rem;
     width: 100%;
-    max-width: 35rem;
     border: 1px solid var(--darkGray);
     border-radius: 5px;
     outline: none;
@@ -100,7 +109,6 @@ input[type='radio']{
     color: var(--white);
     height: 5.8rem;
     width: 100%;
-    max-width: 35rem;
     outline: none;
     border: none;
     border-radius: 5px;

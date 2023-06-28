@@ -11,26 +11,26 @@
 </head>
 <body>
     <div class="mainContainer">
-        <h3 class="componentTitle">Ingresar documentos a la cola</h3>
+        <section class="agregarDocumentosCola">
+            <h3 class="componentTitle">Ingresar documentos a la cola</h3>
+            <div class="docTypeContainer">
+                <label for="FE" class='docTypeOption'>
+                    <input type="radio" name="docType" id="FE" value="FE">
+                    <span>FE</span>
+                </label>
+                <label for="REM" class='docTypeOption'>
+                    <input type="radio" name="docType" id="REM" value="REM">
+                    <span>REM</span>
+                </label>
+                <label for="PED" class='docTypeOption'>
+                    <input type="radio" name="docType" id="PED" value="PED">
+                    <span>PED</span>
+                </label>
+            </div>
+            <input type="text" placeholder="123456" class="documentInput" min="0" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            <button class="primaryBtn">Agregar a la cola</button>
+        </section>
 
-        <div class="docTypeContainer">
-            <label for="FE" class='docTypeOption'>
-                <input type="radio" name="docType" id="FE" value="FE">
-                <span>FE</span>
-            </label>
-            <label for="REM" class='docTypeOption'>
-                <input type="radio" name="docType" id="REM" value="REM">
-                <span>REM</span>
-            </label>
-            <label for="PED" class='docTypeOption'>
-                <input type="radio" name="docType" id="PED" value="PED">
-                <span>PED</span>
-            </label>
-        </div>
-
-        <input type="text" placeholder="123456" class="documentInput" min="0" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-
-        <button class="primaryBtn">Agregar a la cola</button>
 
         <section class="colaContainer">
             <div class="colaHeader">
@@ -50,41 +50,44 @@
             </ul>
         </section>
 
-        <div class="contadorContainer">
-            <p><span>🧊 </span>Cantidad Neveras</p>
-            <div class="contador">
-                <button onclick="decreaseValue('cantNeveras')">-</button>
-                <input type="text" id="cantNeveras" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                <button onclick="increaseValue('cantNeveras')">+</button>
-            </div>
-        </div>
-        <div class="contadorContainer">
-            <p><span>📦 </span>Cantidad Cajas</p>
-            <div class="contador">
-                <button onclick="decreaseValue('cantCajas')">-</button>
-                <input type="text" id="cantCajas" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                <button onclick="increaseValue('cantCajas')">+</button>
-            </div>
-        </div>
-
-        <section class="rangos">
-            <h3 class="componentTitle">Personalizar Rangos <span>▼</span></h3>
+        <section class="contadores">
             <div class="contadorContainer">
-                <p><span>🏳️ </span>Desde</p>
+                <p><span>🧊 </span>Cantidad Neveras</p>
                 <div class="contador">
-                    <button onclick="decreaseValue('desde')">-</button>
-                    <input type="text" id="desde" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                    <button onclick="increaseValue('desde')">+</button>
+                    <button onclick="decreaseValue('cantNeveras')">-</button>
+                    <input type="text" id="cantNeveras" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <button onclick="increaseValue('cantNeveras')">+</button>
                 </div>
             </div>
             <div class="contadorContainer">
-                <p><span>🏁 </span>Hasta</p>
+                <p><span>📦 </span>Cantidad Cajas</p>
                 <div class="contador">
-                    <button onclick="decreaseValue('hasta')">-</button>
-                    <input type="text" id="hasta" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                    <button onclick="increaseValue('hasta')">+</button>
+                    <button onclick="decreaseValue('cantCajas')">-</button>
+                    <input type="text" id="cantCajas" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <button onclick="increaseValue('cantCajas')">+</button>
                 </div>
             </div>
+            <section class="rangosContainer">
+                <h3 class="componentTitle" onclick="hideShowRangos()">Personalizar Rangos <span>▼</span></h3>
+                <div class="disabled" id="desdeHasta">
+                    <div class="contadorContainer">
+                        <p><span>🏳️ </span>Desde</p>
+                        <div class="contador">
+                            <button onclick="decreaseValue('desde')">-</button>
+                            <input type="text" id="desde" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                            <button onclick="increaseValue('desde')">+</button>
+                        </div>
+                    </div>
+                    <div class="contadorContainer">
+                        <p><span>🏁 </span>Hasta</p>
+                        <div class="contador">
+                            <button onclick="decreaseValue('hasta')">-</button>
+                            <input type="text" id="hasta" placeholder="0" min="0" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                            <button onclick="increaseValue('hasta')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <button class="primaryBtn">Generar etiquetas</button>

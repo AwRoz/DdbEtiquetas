@@ -14,3 +14,8 @@ function increaseValue(inputId){
         input.value = parseInt(input.value) + 1
     }
 }
+
+function hideShowRangos(){
+    const bloque = document.querySelector('#desdeHasta')
+    bloque.classList.toggle('disabled')
+}

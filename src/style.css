@@ -15,20 +15,69 @@
     --darkBlue: #0958a25f;
 }
 
+body{
+    position: relative;
+    height: 100vh;
+}
+
+@media(min-width:700px){
+    .mainContainer{
+        max-height: 100%;
+        grid-template-columns: auto auto 1fr;
+        grid-template-rows: auto auto 1fr;
+        margin-left: 20px;
+        justify-content: start;
+        column-gap: 60px;
+    }
+
+    .mainContainer > *{
+        max-width: 350px;
+    }
+    .agregarDocumentosCola{
+        grid-column: 1;
+    }
+    .colaContainer{
+        grid-column: 1;
+    }
+    .generarEtiquetasBtnContainer{
+        height: 100px;
+        position:sticky;
+        bottom: 10px;
+        width: 100vw;
+        padding-top: 20px;
+        border-top: 1px dotted var(--darkGray);
+        background-color: var(--white);
+    }
+    .colaContainer{
+        margin-bottom: 200px;
+    }
+    .contadores{
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        margin-top: 20px;
+    }
+}
+@media(max-width:699px){
+    .mainContainer{
+        max-width: 425px;
+        margin: 0 auto;
+        gap: 10px;
+    }
+    .generarEtiquetasBtnContainer{
+        max-width: 425px;
+        margin: 0 auto;
+        padding: 0 12px 0 12px;
+    }
+}
+
+
 .mainContainer{
     min-width: 250px;
-    max-width: 425px;
     padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
 }
-.mainContainer section{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
-}
+
 .disabled{
     display: none;
 }
@@ -49,6 +98,11 @@
 }
 
 /* ----- Document Type component ------ */
+.agregarDocumentosCola{
+    display: grid;
+    gap: 14px;
+    margin-bottom: 2.8rem;
+}
 input[type='radio']{
     display: none;
 }
@@ -115,16 +169,26 @@ input[type='radio']{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
+    max-width: 40rem;
 }
 .primaryBtn:hover{
     background-color: var(--ddbRed2);
 }
+.generarEtiquetasBtn{
+    display: block;
+    margin: 0 auto;
+}
+
 
 /* ----- Cola de Documentos component ------ */
 .colaContainer{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1.6rem;
+    padding: 14px 10px 14px 10px;
+    margin-bottom: 2.8rem;
+    background-color: var(--lightGray);
+    border-top: 1px dotted var(--darkGray);
+    border-bottom: 1px dotted var(--darkGray);
 }
 .colaDocumentos{
     display: flex;
@@ -217,4 +281,12 @@ input[type='radio']{
 .contador input:focus::placeholder{
     color: transparent;
 }
-
+.rangosContainer{
+    border:1px solid var(--darkGray);
+    padding: 8px;
+    margin-top:18px;
+    border-radius:5px;
+}
+.contadores{
+    margin-bottom: 2.8rem;
+}

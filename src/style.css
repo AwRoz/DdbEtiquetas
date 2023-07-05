@@ -15,10 +15,6 @@
     --darkBlue: #0958a25f;
 }
 
-body{
-    position: relative;
-    height: 100vh;
-}
 
 @media(min-width:700px){
     .mainContainer{
@@ -41,9 +37,10 @@ body{
     }
     .generarEtiquetasBtnContainer{
         height: 100px;
-        position:sticky;
-        bottom: 10px;
-        width: 100vw;
+        position: relative;
+        /* position:sticky; */
+        /* bottom: 10px; */
+        /* width: 100vw; */
         padding-top: 20px;
         border-top: 1px dotted var(--darkGray);
         background-color: var(--white);
@@ -177,6 +174,9 @@ input[type='radio']{
 .generarEtiquetasBtn{
     display: block;
     margin: 0 auto;
+}
+.generarEtiquetasBtnContainer{
+    margin-bottom: 20px;
 }
 
 

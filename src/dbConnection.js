@@ -1,4 +1,4 @@
-require('dotenv').config({path:'../.env'})
+require('dotenv').config({path:'./.env'})
 const oracledb = require('oracledb')
 const dbConfig = require('./dbconfig.js')
 

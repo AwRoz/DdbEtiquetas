@@ -12,23 +12,23 @@
 <body>
     <div class="mainContainer">
         <section class="agregarDocumentosCola">
-            <h3 class="componentTitle">Ingresar documentos a la cola</h3>
-            <div class="docTypeContainer">
-                <label for="FE" class='docTypeOption'>
-                    <input type="radio" name="docType" id="FE" value="FE">
-                    <span>FE</span>
-                </label>
-                <label for="REM" class='docTypeOption'>
-                    <input type="radio" name="docType" id="REM" value="REM">
-                    <span>REM</span>
-                </label>
-                <label for="PED" class='docTypeOption'>
-                    <input type="radio" name="docType" id="PED" value="PED">
-                    <span>PED</span>
-                </label>
-            </div>
-            <input type="text" placeholder="123456" class="documentInput" min="0" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-            <button class="primaryBtn">Agregar a la cola</button>
+                <h3 class="componentTitle">Ingresar documentos a la cola</h3>
+                <div class="docTypeContainer">
+                    <label for="FE" class='docTypeOption'>
+                        <input type="radio" name="docType" id="FE" value="FE">
+                        <span>FE</span>
+                    </label>
+                    <label for="REM" class='docTypeOption'>
+                        <input type="radio" name="docType" id="REM" value="REM">
+                        <span>REM</span>
+                    </label>
+                    <label for="PED" class='docTypeOption'>
+                        <input type="radio" name="docType" id="PED" value="PED">
+                        <span>PED</span>
+                    </label>
+                </div>
+                <input type="text" placeholder="123456" id="numeroDocumento" class="documentInput" min="0" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                <button class="primaryBtn" id="agregaDocumentosCola">Agregar a la cola</button>
         </section>
 
 
@@ -95,6 +95,7 @@
     <section class="generarEtiquetasBtnContainer">
         <button class="primaryBtn generarEtiquetasBtn">Generar etiquetas</button>
     </section>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="agregaDocumentosCola.js"></script>
 </body>
 </html>

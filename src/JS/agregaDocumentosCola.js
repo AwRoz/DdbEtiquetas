@@ -1,6 +1,6 @@
-// require('dotenv').config({path:'./.env'})
-// const dbConfig = require('./dbconfig.js')
-// const oracledb = require('oracledb')
+require('dotenv').config({path:'./.env'})
+const dbConfig = require('./dbconfig.js')
+const oracledb = require('oracledb')
 
 async function consultarDocumento(serie,numero){
     let connection
@@ -23,7 +23,6 @@ async function consultarDocumento(serie,numero){
         }
     }
 }
-
 
 // consultarDocumento('FE','123')
 // initializeOracleDB()
